@@ -16,13 +16,14 @@ public class CityEntity {
 	
 	protected CityEntity() {}
 
-	public CityEntity(String name) {
+	public CityEntity(String name, List<BuildingEntity> buildings) {
 		this.name = name;
+		this.buildings = buildings;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("[id=%d, name='%s']", id, name);
+		return String.format("[id=%d, name='%s', buildings='%s']", id, name, buildings);
 	}
 
 	public Long getId() {
