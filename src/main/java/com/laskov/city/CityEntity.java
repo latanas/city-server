@@ -1,5 +1,7 @@
 package com.laskov.city;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,8 +14,11 @@ import java.util.List;
 @Entity
 public class CityEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "id") 
 	private Long id;
+
 	private String name;
 
 	@OneToMany

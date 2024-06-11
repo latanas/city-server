@@ -1,5 +1,7 @@
 package com.laskov.city;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,8 +10,11 @@ import jakarta.persistence.Id;
 @Entity
 public class BuildingTypeEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "id") 
 	private Long id;
+	
 	private String name;
 	
 	protected BuildingTypeEntity() {}
