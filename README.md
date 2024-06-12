@@ -2,15 +2,18 @@
 Small web service in Java to support saving and loading of city designs in JSON format.
 It uses Spring JPA Data to store the city design in MariaDB, and exposes RESTful repositroy with create/update/destroy operations.
 
-# Running the Server
+# Running the Server for Local Testing
 
 Download and install the JDK 22 from Adoptorium: https://adoptium.net/temurin/releases/
+
 Download and install MariaDB: https://mariadb.org/
 
 Log into the MariaDB command line to reate a test database:
 
 `create user 'test'@'localhost' identified by 'test';`
+
 `create database 'city';`
+
 `grant all privileges on city.* to 'test'@'localhost';`
 
 In the project folder, compile and run the server on the command line:
