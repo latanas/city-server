@@ -8,13 +8,13 @@ Download and install the JDK 22 from Adoptorium: https://adoptium.net/temurin/re
 
 Download and install MariaDB: https://mariadb.org/
 
-Log into the MariaDB command line to reate a test database:
+Log into the MariaDB command line to create a test database:
 
-`create user 'test'@'localhost' identified by 'test';`
-
-`create database 'city';`
-
-`grant all privileges on city.* to 'test'@'localhost';`
+```
+create user 'test'@'localhost' identified by 'test';
+create database 'city';
+grant all privileges on city.* to 'test'@'localhost';
+```
 
 In the project folder, compile and run the server on the command line:
 
