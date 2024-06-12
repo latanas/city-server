@@ -13,13 +13,16 @@ public class BuildingEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Basic(optional = false)
-	@Column(name = "id") 
 	private Long id;
-	
+
+	@Basic(optional = false)
 	private Long x;
+
+	@Basic(optional = false)
 	private Long y;
 
 	@ManyToOne
+	@Basic(optional = false)
 	private BuildingTypeEntity type;
 
 	protected BuildingEntity() {}

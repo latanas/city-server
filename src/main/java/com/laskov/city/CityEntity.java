@@ -16,12 +16,13 @@ public class CityEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Basic(optional = false)
-	@Column(name = "id") 
 	private Long id;
 
+	@Basic(optional = false)
 	private String name;
 
-	@OneToMany
+	@OneToMany(orphanRemoval = true)
+	@Basic(optional = false)
 	private List<BuildingEntity> buildings;
 	
 	protected CityEntity() {}
