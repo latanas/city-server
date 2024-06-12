@@ -1,6 +1,6 @@
 # City Design App (Server)
 Small web service in Java to support saving and loading of city designs in JSON format.
-It uses Spring JPA Data to store the city design in MariaDB, and exposes repositroy with create/update/destroy API operations.
+It uses Spring JPA Data to store the city design in MariaDB, and exposes RESTful repositroy with create/update/destroy operations.
 
 # Running the Server
 
