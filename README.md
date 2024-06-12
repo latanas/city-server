@@ -4,6 +4,17 @@ It uses Spring JPA Data to store the city design in MariaDB, and exposes RESTful
 
 # Running the Server
 
+Download and install the JDK 22 from Adoptorium: https://adoptium.net/temurin/releases/
+Download and install MariaDB: https://mariadb.org/
+
+Log into the MariaDB command line to reate a test database:
+
+`create user 'test'@'localhost' identified by 'test';`
+`create database 'city';`
+`grant all privileges on city.* to 'test'@'localhost';`
+
+In the project folder, compile and run the server on the command line:
+
 `./mvnw spring-boot:run`
 
 You might be prompted to allow firewall access as this will run on `http://localhost:8080` by default.
