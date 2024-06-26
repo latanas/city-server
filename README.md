@@ -29,6 +29,6 @@ The test user must be given sufficient privileges to automatically create the da
 
 `./mvnw clean package`
 
-Make sure to change the `test` user to something else before deployment! In the future, I will a separate `deployment` Maven profile to do this automatically.
+Make sure to change the `test` user to something else before deployment! In the future, I will create a separate `deployment` Maven profile to do this automatically.
 The server is configured to deploy to Apache Tomcat, copy the `.war` archive form the `target\` folder into the Apache Tomcat deployment folder.
 
