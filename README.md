@@ -27,8 +27,12 @@ The test user must be given sufficient privileges to automatically create the da
 
 # Deployment of the Server
 
+Currently, the project must not be deployed to any public server, as I need to implement the API authentication.
+In the future, I will create a separate `deployment` Maven profile. 
+
+The project can be depoyed to local Apache Tomcat server, just make sure to change the `test` user before executing the following command:
+
 `./mvnw clean package`
 
-Make sure to change the `test` user to something else before deployment! In the future, I will create a separate `deployment` Maven profile to do this automatically.
-The server is configured to deploy to Apache Tomcat, copy the `.war` archive form the `target\` folder into the Apache Tomcat deployment folder.
+Copy the produced `.war` archive form the `target\` folder into the local Apache Tomcat.
 
